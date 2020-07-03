@@ -14,7 +14,7 @@ type ClanChallenge struct {
 	Cycle            int    `json:"cycle"`
 	Damage           int    `json:"damage"`
 	HealthRemain     int    `json:"health_ramain"` // It is a typo in original JSON format
-	IsContinue       int    `json:"is_continue"`
+	IsContinue       bool   `json:"is_continue"`
 	Message          string `json:"message"`
 	QQID             int    `json:"qqid"`
 }

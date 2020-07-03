@@ -49,6 +49,10 @@ func InsertClanChallenges(SQLFile string, GID int, challenges []ClanChallenge) {
 			vals = make([]interface{}, 0)
 		}
 		InsertFormation = append(InsertFormation, value)
+		var IsContinue int
+		if challenge.IsContinue {
+			IsContinue = 1
+		}
 		vals = append(vals,
 			GID,
 			challenge.QQID,
@@ -56,7 +60,7 @@ func InsertClanChallenges(SQLFile string, GID int, challenges []ClanChallenge) {
 			challenge.BossNum,
 			challenge.HealthRemain,
 			challenge.Damage,
-			challenge.IsContinue,
+			IsContinue,
 			challenge.Message,
 			challenge.Behalf,
 			challenge.BattleID,
